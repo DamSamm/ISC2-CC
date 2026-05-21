@@ -1,0 +1,677 @@
+[
+  {
+    "question": "What is the primary purpose of a cloud security group (CSG) in a public cloud environment?",
+    "options": ["To provide physical security for cloud data centers", "To manage access control for cloud resources", "To optimize cloud resource allocation", "To enforce regulatory compliance in the cloud"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the main advantage of using a symmetric encryption algorithm over an asymmetric encryption algorithm?",
+    "options": ["Symmetric encryption algorithms are faster and more efficient", "Asymmetric encryption algorithms provide better security", "Symmetric encryption algorithms require fewer resources", "Asymmetric encryption algorithms are easier to implement"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary purpose of using digital signatures in cryptographic protocols?",
+    "options": ["To encrypt data for secure transmission", "To verify the integrity and authenticity of data", "To generate random cryptographic keys", "To prevent unauthorized access to sensitive information"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What security feature is commonly used with HTTPS?",
+    "options": ["IPsec", "SSH", "SSL/TLS", "VPN"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following is a characteristic of Infrastructure as a Service (IaaS)?",
+    "options": ["Fully managed applications", "Pay-as-you-go pricing model", "Predetermined software configurations", "Limited scalability options"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the primary purpose of implementing a disaster recovery plan in a cloud environment?",
+    "options": ["To prevent unauthorized access to cloud resources", "To ensure continuous availability of critical services during a disaster", "To optimize cloud resource utilization", "To automate software deployment processes"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which device is used to connect WAN to LAN?",
+    "options": ["Firewalls", "Router", "Hub", "Switch"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which cloud service model provides developers with a platform to build, deploy, and manage applications without managing underlying infrastructure?",
+    "options": ["Infrastructure as a Service (IaaS)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)", "Function as a Service (FaaS)"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An attacker intercepts traffic between a user and a server in order to eavesdrop on sensitive information being transmitted. This is an example of what type of attack?",
+    "options": ["On-path Attack", "Spoofing", "Phishing", "Side-channel"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which network security measure is used to authenticate and authorize users and devices connecting to a network?",
+    "options": ["Virtual Private Network (VPN)", "Intrusion Detection System (IDS)", "Network Access Control (NAC)", "Packet Filtering"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which port is used by the FTP protocol?",
+    "options": ["21", "22", "23", "80"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which authentication mechanism is commonly used to access cloud resources securely from external networks?",
+    "options": ["Username and password", "Biometric authentication", "OAuth (Open Authorization)", "LDAP (Lightweight Directory Access Protocol)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which port is commonly used for SSH?",
+    "options": ["22", "23", "80", "443"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary purpose of data encryption in transit in cloud environments?",
+    "options": ["To prevent unauthorized access to cloud resources", "To protect data from unauthorized disclosure during transmission over networks", "To optimize cloud resource utilization", "To automate software deployment processes"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "A user receives an email that appears to be from their bank, requesting their login credentials. This is an example of what type of attack?",
+    "options": ["Spoofing", "Phishing", "DOS/DDOS", "Virus"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which port is used by the SSH protocol for secure file transfers?",
+    "options": ["SFTP", "SCP", "FTPS", "TFTP"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the purpose of conducting regular tests and exercises of a Business Continuity Plan (BCP)?",
+    "options": ["To minimize resource utilization during normal operations", "To validate the effectiveness of the plan and identify areas for improvement", "To increase profitability of the organization", "To prevent all types of disasters from occurring"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the main advantage of using a cloud access security broker (CASB) solution in cloud environments?",
+    "options": ["To prevent distributed denial of service (DDoS) attacks", "To monitor and control data traffic between on-premises and cloud environments", "To encrypt data stored in cloud databases", "To optimize cloud resource utilization"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the purpose of a Business Continuity Plan (BCP)?",
+    "options": ["To prevent all types of disasters from occurring", "To ensure the organization can continue critical business operations during and after a disaster", "To optimize resource utilization during normal operations", "To increase profitability"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which type of attack involves flooding a network or server with traffic, rendering it unavailable to legitimate users?",
+    "options": ["DOS/DDOS", "Spoofing", "Phishing", "Virus"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which cloud deployment model provides dedicated infrastructure for a single organization?",
+    "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the primary goal of cloud access security brokers (CASBs)?",
+    "options": ["To provide identity and access management services", "To monitor and control data traffic between on-premises and cloud environments", "To encrypt data stored in cloud databases", "To optimize cloud resource allocation"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which encryption protocol is commonly used to secure data transmitted over wireless networks?",
+    "options": ["WPA2 (Wi-Fi Protected Access 2)", "SSL (Secure Sockets Layer)", "TLS (Transport Layer Security)", "AES (Advanced Encryption Standard)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "How does IPSec protect against replay attacks?",
+    "options": ["By encrypting all network traffic", "By using digital signatures", "By using sequence numbers", "By limiting access to the network"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which cloud deployment model provides a combination of private and public cloud resources?",
+    "options": ["Public cloud", "Private cloud", "Hybrid cloud", "Community cloud"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which port is used by the Telnet protocol?",
+    "options": ["23", "21", "22", "80"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which authentication mechanism is commonly used to access cloud resources securely from external networks? (Alternative)",
+    "options": ["Username and password", "Biometric authentication", "OAuth (Open Authorization)", "LDAP (Lightweight Directory Access Protocol)"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the primary purpose of using role-based access control (RBAC) in a cloud environment?",
+    "options": ["To prevent distributed denial of service (DDoS) attacks", "To enforce regulatory compliance", "To monitor user activities and access patterns", "To restrict access to cloud resources based on users' roles and responsibilities"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the primary purpose of network segmentation in cloud environments?",
+    "options": ["To increase network bandwidth", "To reduce latency for cloud applications", "To isolate sensitive workloads and data from potential threats", "To automate network provisioning processes"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following is an example of a registered port?",
+    "options": ["Microsoft SQL Server", "RADIUS authentication", "HTTP", "SMB"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the purpose of implementing a Virtual Private Network (VPN) in a network?",
+    "options": ["To optimize network performance", "To securely connect remote users and devices to a private network over the internet", "To prevent physical access to network devices", "To monitor network traffic for compliance purposes"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which cloud service model provides ready-to-use software applications over the internet?",
+    "options": ["Infrastructure as a Service (IaaS)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)", "Function as a Service (FaaS)"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "An organization is experiencing issues with their VPN connection, causing frequent disconnects. Which OSI layer is most likely affected by this issue?",
+    "options": ["Application Layer", "Transport Layer", "Network Layer", "Physical Layer"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which cryptographic algorithm is vulnerable to collision attacks and should not be used for generating digital signatures?",
+    "options": ["AES (Advanced Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "MD5 (Message Digest Algorithm 5)", "SHA-256 (Secure Hash Algorithm 256-bit)"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the primary purpose of a distributed denial of service (DDoS) mitigation service in cloud environments?",
+    "options": ["To prevent unauthorized access to cloud resources", "To monitor and analyze network traffic patterns", "To detect and block malicious traffic targeting cloud services", "To optimize cloud resource utilization"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following would be considered an endpoint?",
+    "options": ["Software task", "Router", "Firewall", "Laptop"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which encryption algorithm is commonly used to protect data in transit between cloud services and users' devices?",
+    "options": ["AES (Advanced Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "DES (Data Encryption Standard)", "MD5 (Message Digest Algorithm 5)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is an IPv4 address?",
+    "options": ["A 128-bit address used to uniquely identify devices on a network.", "A 32-bit address used to uniquely identify devices on a network.", "An address used for internal network use only.", "An address used for documentation purposes only."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which cryptographic attack targets the process of intercepting and altering communication between two parties?",
+    "options": ["Man-in-the-middle (MITM) attack", "Brute-force attack", "Dictionary attack", "Rainbow table attack"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which type of malware encrypts a user's files and demands payment in exchange for the decryption key?",
+    "options": ["Ransomware", "Worm", "Trojan", "Virus"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What security control is used to protect data in transit between cloud services and users' devices?",
+    "options": ["Data encryption at rest", "Network intrusion detection systems (NIDS)", "Transport Layer Security (TLS)", "Role-based access control (RBAC)"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which component of a Business Continuity Plan (BCP) identifies critical business functions and the resources required to support them?",
+    "options": ["Plan development and testing", "Risk assessment", "Business impact analysis (BIA)", "Plan implementation"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the primary objective of a disaster recovery plan in cloud computing?",
+    "options": ["To prevent unauthorized access to cloud resources", "To ensure continuous availability of critical services during a disaster", "To optimize cloud resource utilization", "To automate software deployment processes"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the primary purpose of using a digital certificate in public key infrastructure (PKI)?",
+    "options": ["To encrypt data for secure transmission", "To authenticate the identity of users and devices", "To generate random cryptographic keys", "To prevent buffer overflow attacks"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "A hacker gains access to a company's network and begins to intercept network traffic in order to steal login credentials. Which OSI layer is being attacked?",
+    "options": ["Physical layer", "Data link layer", "Network layer", "Application layer"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which security control is used to verify the integrity and authenticity of cloud service providers?",
+    "options": ["Service level agreements (SLAs)", "Cloud security certifications", "Encryption protocols", "Intrusion detection systems (IDS)"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which encryption algorithm is commonly used to protect data in transit in cloud environments?",
+    "options": ["AES (Advanced Encryption Standard)", "DES (Data Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "MD5 (Message Digest Algorithm 5)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which of the following is a characteristic of a public cloud deployment model?",
+    "options": ["Dedicated infrastructure for a single organization", "Limited scalability options", "Shared infrastructure for multiple organizations", "Full control over hardware and software configurations"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "At which layer of the TCP/IP protocol stack does a firewall operate?",
+    "options": ["Layer 1", "Layer 2", "Layer 3", "Layer 4"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the primary purpose of using a salt when hashing passwords?",
+    "options": ["To add flavor to the password", "To increase the entropy of the hashed passwords", "To make the passwords easier to crack", "To decrease the security of the hashing algorithm"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which security control is used to prevent unauthorized access to sensitive data in cloud databases?",
+    "options": ["Role-based access control (RBAC)", "Network intrusion detection systems (NIDS)", "Distributed denial of service (DDoS) mitigation", "Security information and event management (SIEM)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What protocol is associated with port 53?",
+    "options": ["DNS", "SMTP", "HTTP", "HTTPS"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What layer of the OSI model is the target of a ping flood attack?",
+    "options": ["Layer 3", "Layer 4", "Layer 5", "Layer 6"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the potential impact of an IPSec replay attack?",
+    "options": ["Unauthorized access to network resources", "Disruption of network communication", "Modification of network traffic", "All of the above"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the primary goal of implementing multi-factor authentication (MFA) in a cloud environment?",
+    "options": ["To prevent unauthorized access to cloud resources", "To optimize cloud resource utilization", "To automate software deployment processes", "To monitor user activities and access patterns"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which cloud deployment model provides cloud resources exclusively for a specific organization?",
+    "options": ["Hybrid cloud", "Public cloud", "Private cloud", "Community cloud"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the primary purpose of implementing network segmentation?",
+    "options": ["To prevent unauthorized access to network resources", "To increase the speed of data transmission across the network", "To divide a network into smaller subnetworks for improved security and performance", "To monitor network traffic for compliance purposes"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which encryption algorithm is commonly used to protect data at rest in cloud storage?",
+    "options": ["AES (Advanced Encryption Standard)", "RSA (Rivest-Shamir-Adleman)", "DES (Data Encryption Standard)", "MD5 (Message Digest Algorithm 5)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "A user clicks on an attachment in an email that they believe is from a friend, which then installs malicious software on their computer. This is an example of what type of malware?",
+    "options": ["Worm", "Virus", "Trojan", "Ransomware"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "A company has been experiencing network connectivity issues that have been traced to a problem with the cabling. Which OSI layer is affected by this issue?",
+    "options": ["Application Layer", "Transport Layer", "Network Layer", "Physical Layer"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the primary goal of data loss prevention (DLP) solutions in cloud environments?",
+    "options": ["To prevent unauthorized access to cloud resources", "To monitor and control data movement within and outside the organization", "To optimize cloud resource utilization", "To automate software deployment processes"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "A hacker uses a distributed denial of service (DDoS) attack to flood a company's network with traffic, rendering it unable to function properly. Which OSI layer is being attacked?",
+    "options": ["Physical layer", "Data link layer", "Network layer", "Transport layer"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the well-known port for SMTP?",
+    "options": ["25", "80", "443", "22"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What are registered ports used for?",
+    "options": ["Proprietary applications from vendors and developers", "Common protocols at the core of TCP/IP model", "Used for Web servers", "Used for inhouse or opensource applications"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What layer of the OSI model is the target of a port scanning attack?",
+    "options": ["Layer 1", "Layer 2", "Layer 3", "Layer 4"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "A user reports that they are unable to access a specific website. Which OSI layer is most likely affected by this issue?",
+    "options": ["Application Layer", "Transport Layer", "Network Layer", "Data Link Layer"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary objective of implementing a cloud access security broker (CASB) solution?",
+    "options": ["To manage cloud service provider relationships", "To optimize cloud resource utilization", "To monitor and control data traffic between on-premises and cloud environments", "To encrypt data stored in cloud databases"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "What is the purpose of a cloud security posture management (CSPM) tool?",
+    "options": ["To monitor and enforce compliance with security policies in cloud environments", "To optimize cloud resource allocation", "To encrypt data stored in cloud databases", "To automate software deployment processes"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What security control is used to protect data at rest in cloud storage?",
+    "options": ["Role-based access control (RBAC)", "Data encryption", "Intrusion detection systems (IDS)", "Multi-factor authentication (MFA)"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the primary goal of a Disaster Recovery Plan (DRP)?",
+    "options": ["To prevent all types of disasters from occurring", "To ensure the continuity of critical business operations", "To optimize resource utilization during normal operations", "To increase profitability"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What protocol is associated with port 80?",
+    "options": ["HTTP", "FTP", "SSH", "Telnet"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the purpose of a virtual private cloud (VPC)?",
+    "options": ["To provide dedicated physical servers to customers", "To isolate network traffic within a public cloud environment", "To optimize virtual machine performance", "To enforce strict access controls on cloud resources"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which security control is used to detect and respond to security incidents in cloud environments?",
+    "options": ["Multi-factor authentication (MFA)", "Intrusion detection systems (IDS)", "Role-based access control (RBAC)", "Data encryption at rest"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What layer of the OSI model is the target of a man-in-the-middle (MITM) attack?",
+    "options": ["Layer 2", "Layer 3", "Layer 4", "Layer 7"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which cloud service model provides access to virtualized computing resources over the internet?",
+    "options": ["Infrastructure as a Service (IaaS)", "Software as a Service (SaaS)", "Platform as a Service (PaaS)", "Function as a Service (FaaS)"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary goal of implementing role-based access control (RBAC) in a cloud environment?",
+    "options": ["To prevent distributed denial of service (DDoS) attacks", "To enforce regulatory compliance", "To monitor user activities and access patterns", "To restrict access to cloud resources based on users' roles and responsibilities"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the primary purpose of using encryption at rest in cloud storage?",
+    "options": ["To prevent unauthorized access to cloud resources", "To protect data from unauthorized disclosure during transmission over networks", "To optimize cloud resource utilization", "To protect data stored in cloud storage from unauthorized access"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which phase of the Business Continuity Planning (BCP) process involves identifying potential risks and threats to an organization's operations?",
+    "options": ["Risk assessment", "Business impact analysis", "Plan development and testing", "Plan implementation"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary purpose of using network segmentation in a cloud environment?",
+    "options": ["To optimize network bandwidth", "To increase network latency", "To isolate workloads and data for security purposes", "To automate network provisioning processes"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "A cyberattacker changes the website of a pharmacy so it displays incorrect information about COVID testing. This is an example of what kind of compromise?",
+    "options": ["Confidentiality", "Integrity", "Availability", "Nonrepudiation"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "The function of a computer system that verifies the identity of a user is called _________.",
+    "options": ["Authentication", "Authorization", "Authenticity", "Availability"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Jane received an electronic message from Fred that was digitally signed proving it came from him. However, Fred said he never sent it. This is an example of what message integrity characteristic?",
+    "options": ["Nonreputation", "Nonrefutability", "Nonrepudiation", "Authenticity"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following elements do not apply to privacy?",
+    "options": ["Confidentiality", "Integrity", "Availability", "None of the above"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Information assurance refers to the ____________ of information security.",
+    "options": ["Quality", "Confidentiality", "Ethics", "Measurement"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "What is the first thing a cyberattacker would want to do to launch an attack against an organization?",
+    "options": ["Learn about the organization's vulnerabilities.", "Learn about the organization's business, including domain names, corporate information, facilities, names of employees, etc.", "Deploy malware.", "Steal data."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An earthquake is an example of a ____________?",
+    "options": ["Threat agent", "Threat", "Vulnerability", "Risk"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which of the following statements is most correct?",
+    "options": ["Security should be done the same way regardless of the situation.", "Security should be tailored based on the situation.", "It's always best to mitigate risks rather than transfer them.", "Risk avoidance trumps security controls every time."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "You are asked to perform a risk assessment of an information system for the purpose of recommending the most appropriate security controls. You have a short amount of time to do this. You have information about how each asset in the system is used and its importance to the business, but you have no financial information about the assets or the information systems. Which is the most appropriate method to use for this assessment?",
+    "options": ["Qualitative", "Threat modeling", "Quantitative", "Delphi"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "You are asked to implement a risk treatment in which your IT department is removing a server from the environment that it deems is too risky due to having too many vulnerabilities in it. You have just practiced which type of risk treatment?",
+    "options": ["Risk transfer", "Risk avoidance", "Risk acceptance", "Risk mitigation"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "A security engineer is performing a review of an organization's datacenter security controls. They document that the datacenter lacks security cameras for monitoring the facilities. What type of control does this represent?",
+    "options": ["Administrative", "Technical", "Physical", "Logical"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following statements is true regarding the types of security controls?",
+    "options": ["Physical controls are also referred to as logical controls.", "Logical controls are also referred to as managerial controls.", "Physical controls are also referred to as managerial controls.", "Administrative controls are also referred to as soft controls."],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "The senior security engineer is creating a document that provides step-by-step instructions on how to launch a vulnerability scan utilizing the organization's vulnerability scanning tool that all security engineers will be required to follow. Which of the following governance elements is this an example of?",
+    "options": ["Policy", "Procedure", "Guideline", "Law"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An information security policy is an example of which of the following types of controls?",
+    "options": ["Administrative", "Technical", "Logical", "Physical"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Sarah is a security engineer for a Software as a Service (SaaS) organization. Her friend Kyle is a systems administrator for the organization and helped her get the job by serving as a reference. While reviewing some system logs, Sarah discovered that Kyle is running a crypto-mining program on a company server for his own financial gain. How should Sarah respond to this situation?",
+    "options": ["Ask Kyle to stop", "Ask Kyle to share the profits with her", "Mind her own business", "Escalate to senior management"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Jane is a security administrator setting up access for a new employee who works in the manufacturing department. Jane makes sure to enable the employee's access for the manufacturing area but not for the parts storage area. What best describes the principle Jane is applying?",
+    "options": ["Principle of authentication", "Two-person rule", "Need to know", "Least privilege"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Which statement best describes the relationship between subjects, objects, and rules?",
+    "options": ["A subject grants access to an object based on rules.", "An object is granted access to a subject based on rules.", "A subject is granted access to an object based on rules.", "An object is granted access to a subject based on credentials."],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Credentials are composed of which of the following elements?",
+    "options": ["Username and password", "Authorization and accountability", "Something you know and something you have", "Subjects and objects"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Joe has to log in to many systems on a daily basis and has too many passwords to remember. What is the best way for Joe to manage his passwords?",
+    "options": ["Write the passwords down on a piece of paper.", "Store the passwords in a text file and store it in a safe place.", "Use the same password for every system so he only has to remember one password.", "Use a password manager or password vault software."],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Debby has been an employee of Acme Corp. for over 20 years. During that time, she has been able to access more and more systems. Now she has access to systems she doesn't even need access to in order to do her job. This is an example of what type of situation?",
+    "options": ["Privilege modification", "Access management", "Privileged access management", "Privilege creep"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "The identity and access management lifecycle consists of which steps?",
+    "options": ["Provisioning, review, revocation", "Setup, review, auditing", "Creation, monitoring, termination", "Identification, authentication, authorization"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which of the following access control models leverages roles to provision access, where users with similar access needs are assigned to the same role?",
+    "options": ["DAC", "MAC", "RBAC", "None of the above"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "An organization is concerned about the risk of a car driving from the parking lot through the entrance of the building. Which of the following security measures would best help address this concern?",
+    "options": ["Biometrics", "RBAC", "Badge system", "Bollards"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "The security team is reviewing the configuration of the door that serves as the only entrance or exit to the datacenter. Organization personnel commonly access the datacenter to perform their work. In the event of a fire that impacts power to the door-locking mechanism, which of the following configurations is best?",
+    "options": ["The door should always remain locked.", "The door should fail-secure.", "The door should fail-open.", "The door should automatically lock when there is no power."],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "The security team of an organization is concerned about the physical security of datacenter access. They want the datacenter entrance built in such a way that there are two doors with locks and the first door must close before the next door can be unlocked. Which of the following is this an example of?",
+    "options": ["Bollard", "Mantrap", "Fence", "Biometric"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which of the following access control models allows the creator of a resource the ability to assign permissions to other users?",
+    "options": ["DAC", "MAC", "RBAC", "None of the above"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which of the following is referred to as a physical address in computer networking?",
+    "options": ["IPv4 address", "IPv6 address", "MAC address", "Loopback address"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "How many layers are there in the OSI model?",
+    "options": ["8", "7", "6", "5"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which of the following terms best describes a computer that provides content to other computers such as a website or an application?",
+    "options": ["Client", "Server", "Endpoint", "Router"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the name of the seventh layer of the OSI model?",
+    "options": ["Application", "Session", "Presentation", "Network"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which of the following attacks are most likely to be carried out by a botnet?",
+    "options": ["Advanced persistent threat attack", "DDoS attack", "Trojan horse attack", "Backdoor attack"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "What is the best description of the difference between a phishing email and a spear phishing email?",
+    "options": ["A phishing email is sent to a specific person; a spear phishing email is sent to an entire company.", "A phishing email is sent to random recipients; a spear phishing email is sent to specific recipients.", "A phishing email is sent to an entire company; a spear phishing email is sent to a specific person.", "A spear phishing email is sent to random recipients; a phishing email is sent to specific recipients."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which of the following is not a true statement about a worm?",
+    "options": ["It can replicate itself.", "It is a type of malware.", "It is a type of botnet.", "It does not require a host program to infect and deliver it to the victim system."],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "A rainbow table attack seeks to mitigate the limitations of dictionary or brute force attacks by precomputing the hash of passwords and storing them for later comparison.",
+    "options": ["True", "False"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "What is the primary difference between an IDS and an IPS?",
+    "options": ["They both do the same thing.", "An IDS detects malicious activity, whereas an IPS prevents the activity from happening in the first place.", "An IDS detects malicious activity, whereas an IPS monitors system performance.", "An IDS detects malicious activity, whereas an IPS detects malicious activity and takes action on it."],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "Joe is a cyber criminal who has targeted a web server for a potential cyberattack. Joe wants to know if the server has any unpatched vulnerabilities he might be able to exploit. Which of the following actions is Joe most likely to take?",
+    "options": ["Launch a smurf attack against the target server.", "Run a vulnerability scan against the target server.", "Send a phishing email to the target server.", "Send a spear phishing email to the target server."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "__________________ is a method of attack where a hacker enters SQL commands into fields on a vulnerable web page. The commands are executed without proper authorization.",
+    "options": ["Buffer overflow", "SQL injection", "HTTP response splitting", "Backdoor"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Most cyber criminals would agree that _________________ are the weakest link in cybersecurity.",
+    "options": ["Passwords", "Backdoors", "Laws", "People"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "A hacker uses a phishing attack to obtain a user's credentials, access their company's database, and steal proprietary information. This is an example of _______________.",
+    "options": ["Denial of service", "Advanced persistent threat", "Extortion", "Data exfiltration"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "A sophisticated cyber criminal gains access to a financial institution's email server, installs malware, and then over a period of weeks, moves to other servers and systems on the company's network, installing other malware and tools, finding other credentials, stealing data, and scrubbing logs to cover her tracks. Which term best describes this type of activity?",
+    "options": ["Denial of service attack", "Advanced persistent threat attack", "Extortion attack", "Website defacement attack"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Mary is a network engineer who wants to install a firewall in front of a database server to hide its IP address. What type of firewall should Mary choose?",
+    "options": ["Proxy", "Packet filter", "Stateful/dynamic packet filter", "Database filter"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Antivirus software vendors use ______________ to keep up with the latest information about viruses and threats.",
+    "options": ["Google", "National Vulnerability Database", "Threat intelligence", "National Security Agency"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "When leveraging a third-party cloud service provider, which of the following is always the responsibility of the provider?",
+    "options": ["Data security", "Physical security of the datacenter", "Identity and access management controls", "Endpoint protection"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An organization is utilizing a public cloud from a cloud service whose service offering allows the organization to use a framework to build and deploy custom applications. Which of the following cloud service models is being utilized?",
+    "options": ["IaaS", "PaaS", "SaaS", "On-premises"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An organization is using a cloud service provider to host their infrastructure. The cloud service provider manages the underlying infrastructure, and the organization manages the platforms and software (such as the OS, development tools, and applications). Which of the following cloud service models is being utilized?",
+    "options": ["IaaS", "PaaS", "SaaS", "On-premises"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "An organization has built out a cloud environment in their own datacenter for exclusive use by their employees to allow other teams to provision and manage virtual resources. Which of the following cloud deployment models is this an example of?",
+    "options": ["Public", "Private", "Community", "Hybrid"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "An organization is hosting applications in a private cloud environment and also making use of Amazon Web Services (AWS) to load-balance the traffic for applications if there is a spike in demand. Which of the following cloud deployment models is this an example of?",
+    "options": ["Public", "Private", "Community", "Hybrid"],
+    "correctAnswerIndex": 3
+  },
+  {
+    "question": "An organization is utilizing Google Mail (Gmail) as their email service provider. Which of the following types of cloud service models is being utilized?",
+    "options": ["SaaS", "PaaS", "IaaS", "On-premises"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Alice sends Bob a message encrypted with a private key. Bob decrypts the message with the same private key. Which of the following types of encryption is this an example of?",
+    "options": ["Asymmetric", "Symmetric", "Hashing", "None of the above"],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Which of the following is not a secure method of data deletion?",
+    "options": ["Emptying the recycle bin on your computer desktop", "Physical destruction of a hard drive", "Zeroization", "Overwriting"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "Which of the following can be used to create message digests?",
+    "options": ["Symmetric encryption algorithms", "Asymmetric encryption algorithms", "Hash functions", "All of the above"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "A security administrator is looking for ways to automate the monitoring of logs throughout the environment. Which of the following solutions would help provide automated monitoring capability?",
+    "options": ["Regularly review the logs", "Store the logs on a centralized log server", "Implement a SIEM", "Implement a firewall"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "Which of the following types of encryption uses two keys: one for encryption and a separate key for decryption?",
+    "options": ["Asymmetric", "Symmetric", "Hashing", "None of the above"],
+    "correctAnswerIndex": 0
+  },
+  {
+    "question": "As the new CISO of his organization, Joe decided to initiate a comprehensive set of scans. The scans reported that nearly all of his endpoints have known operating system vulnerabilities. What is the most likely root cause of this situation?",
+    "options": ["The organization is the victim of an advanced persistent threat.", "The endpoints do not have up-to-date antimalware software installed.", "The endpoints have not been kept up-to-date with the latest security patches.", "Brute force attack."],
+    "correctAnswerIndex": 2
+  },
+  {
+    "question": "A network administrator found that one of the firewalls was no longer configured in accordance with recommended settings from DISA as it once was. What is the most likely reason for this?",
+    "options": ["The settings from DISA were incorrect.", "Configuration management procedures for the device were not followed.", "Privilege creep.", "Data integrity."],
+    "correctAnswerIndex": 1
+  },
+  {
+    "question": "Mary isn't sure if she is allowed to use her company-owned laptop to send messages to her friend on Facebook. To find out if she can, which policy should she refer to?",
+    "options": ["AUP", "BYOD policy", "Data handling policy", "None of the above"],
+    "correctAnswerIndex": 0
+  }
+]
