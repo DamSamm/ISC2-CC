@@ -57,7 +57,7 @@
   {
     "question": "Which authentication mechanism is commonly used to access cloud resources securely from external networks?",
     "options": ["Username and password", "Biometric authentication", "OAuth (Open Authorization)", "LDAP (Lightweight Directory Access Protocol)"],
-    "correctAnswerIndex": 0
+    "correctAnswerIndex": 2
   },
   {
     "question": "Which port is commonly used for SSH?",

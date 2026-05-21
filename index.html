@@ -356,6 +356,30 @@
             <button class="btn-primary" onclick="startQuiz()" style="margin-top: 20px;">Start Quiz</button>
         </div>
 
+        <!-- Question Selector Screen -->
+        <div id="selectorScreen" class="start-screen" style="display: none;">
+            <h2>How Many Questions?</h2>
+            <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">
+                Choose how many questions you want to answer. Questions will be randomly selected from our database of <span id="dbTotal">135</span> questions.
+                Each attempt will have a different set of randomized questions!
+            </p>
+            <div class="stats" style="grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                <button class="btn-primary" onclick="startQuizWithCount(20)" style="padding: 20px; font-size: 1.1em;">
+                    🚀 20 Questions<br><span style="font-size: 0.8em;">Quick Practice</span>
+                </button>
+                <button class="btn-primary" onclick="startQuizWithCount(50)" style="padding: 20px; font-size: 1.1em;">
+                    📖 50 Questions<br><span style="font-size: 0.8em;">Standard</span>
+                </button>
+                <button class="btn-primary" onclick="startQuizWithCount(70)" style="padding: 20px; font-size: 1.1em;">
+                    💪 70 Questions<br><span style="font-size: 0.8em;">Challenging</span>
+                </button>
+                <button class="btn-primary" onclick="startQuizWithCount(130)" style="padding: 20px; font-size: 1.1em;">
+                    🏆 Full Quiz<br><span style="font-size: 0.8em;">All Questions</span>
+                </button>
+            </div>
+            <button class="btn-secondary" onclick="document.getElementById('selectorScreen').style.display='none'; document.getElementById('startScreen').style.display='block';" style="margin-top: 20px;">← Back</button>
+        </div>
+
         <!-- Quiz Screen -->
         <div id="quizScreen" class="quiz-screen">
             <div class="progress-bar">
@@ -392,18 +416,20 @@
     </div>
 
     <script>
-        let questions = [];
+        let allQuestions = [];
+        let quizQuestions = [];
         let currentQuestion = 0;
         let score = 0;
         let selectedAnswers = [];
         let answered = false;
+        let questionCount = 50;
 
         // Initialize quiz
         async function initQuiz() {
             try {
                 const response = await fetch('questions.json');
-                questions = await response.json();
-                document.getElementById('totalQuestions').textContent = questions.length;
+                allQuestions = await response.json();
+                document.getElementById('totalQuestions').textContent = allQuestions.length;
             } catch (error) {
                 console.error('Error loading questions:', error);
                 // Fallback to embedded questions if file not found
@@ -412,26 +438,57 @@
         }
 
         function loadEmbeddedQuestions() {
-            questions = window.embeddedQuestions || [];
-            document.getElementById('totalQuestions').textContent = questions.length;
+            allQuestions = window.embeddedQuestions || [];
+            document.getElementById('totalQuestions').textContent = allQuestions.length;
         }
 
-        function startQuiz() {
-            if (questions.length === 0) {
+        // Fisher-Yates shuffle algorithm
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Show question count selector
+        function showQuestionSelector() {
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('selectorScreen').style.display = 'block';
+        }
+
+        // Start quiz with selected question count
+        function startQuizWithCount(count) {
+            if (allQuestions.length === 0) {
                 alert('Questions not loaded. Please try again.');
                 return;
             }
-            document.getElementById('startScreen').style.display = 'none';
+            
+            questionCount = Math.min(count, allQuestions.length);
+            
+            // Shuffle all questions and select the first N
+            const shuffled = shuffleArray(allQuestions);
+            quizQuestions = shuffled.slice(0, questionCount);
+            
+            document.getElementById('selectorScreen').style.display = 'none';
             document.getElementById('quizScreen').style.display = 'block';
-            selectedAnswers = new Array(questions.length).fill(null);
+            
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswers = new Array(quizQuestions.length).fill(null);
             displayQuestion();
+        }
+
+        function startQuiz() {
+            showQuestionSelector();
         }
 
         function displayQuestion() {
             answered = false;
-            const question = questions[currentQuestion];
+            const question = quizQuestions[currentQuestion];
             document.getElementById('questionNumber').textContent = 
-                `Question ${currentQuestion + 1} of ${questions.length}`;
+                `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
             document.getElementById('questionText').textContent = question.question;
 
             const optionsContainer = document.getElementById('optionsContainer');
@@ -446,7 +503,7 @@
             });
 
             // Update progress bar
-            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
             document.getElementById('progressFill').style.width = progress + '%';
 
             // Show previously selected answer
@@ -457,14 +514,14 @@
 
             document.getElementById('feedback').classList.remove('show');
             document.getElementById('nextBtn').textContent = 
-                currentQuestion === questions.length - 1 ? 'Finish' : 'Next →';
+                currentQuestion === quizQuestions.length - 1 ? 'Finish' : 'Next →';
         }
 
         function selectAnswer(index) {
             if (answered) return;
 
             selectedAnswers[currentQuestion] = index;
-            const question = questions[currentQuestion];
+            const question = quizQuestions[currentQuestion];
             const optionsContainer = document.getElementById('optionsContainer');
             const buttons = optionsContainer.querySelectorAll('.option');
 
@@ -496,7 +553,7 @@
         }
 
         function nextQuestion() {
-            if (currentQuestion < questions.length - 1) {
+            if (currentQuestion < quizQuestions.length - 1) {
                 currentQuestion++;
                 displayQuestion();
             } else {
@@ -515,10 +572,10 @@
             document.getElementById('quizScreen').style.display = 'none';
             document.getElementById('resultsScreen').style.display = 'block';
 
-            const percentage = Math.round((score / questions.length) * 100);
+            const percentage = Math.round((score / quizQuestions.length) * 100);
             document.getElementById('finalScore').textContent = percentage + '%';
             document.getElementById('correctCount').textContent = score;
-            document.getElementById('totalCount').textContent = questions.length;
+            document.getElementById('totalCount').textContent = quizQuestions.length;
             document.getElementById('percentScore').textContent = percentage;
 
             const resultMessage = document.getElementById('resultMessage');
@@ -547,8 +604,9 @@
             currentQuestion = 0;
             score = 0;
             answered = false;
+            quizQuestions = [];
             document.getElementById('resultsScreen').style.display = 'none';
-            document.getElementById('startScreen').style.display = 'block';
+            showQuestionSelector();
         }
 
         function viewAnswers() {
@@ -557,7 +615,13 @@
         }
 
         // Initialize on page load
-        window.addEventListener('load', initQuiz);
+        window.addEventListener('load', function() {
+            initQuiz();
+            // Update selector screen with database total
+            setTimeout(() => {
+                document.getElementById('dbTotal').textContent = allQuestions.length;
+            }, 500);
+        });
     </script>
 </body>
 </html>
