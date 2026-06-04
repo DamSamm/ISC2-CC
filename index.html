@@ -467,9 +467,24 @@
             
             questionCount = Math.min(count, allQuestions.length);
             
-            // Shuffle all questions and select the first N
+            // Shuffle all questions and select the first N, ensuring no duplicates
             const shuffled = shuffleArray(allQuestions);
-            quizQuestions = shuffled.slice(0, questionCount);
+            quizQuestions = [];
+            const seenQuestions = new Set();
+            
+            for (let i = 0; i < shuffled.length && quizQuestions.length < questionCount; i++) {
+                const qText = shuffled[i].question.toLowerCase().trim();
+                
+                if (!seenQuestions.has(qText)) {
+                    seenQuestions.add(qText);
+                    quizQuestions.push(shuffled[i]);
+                }
+            }
+            
+            // Failsafe: if we couldn't get enough questions due to duplicates, use what we have
+            if (quizQuestions.length < questionCount && quizQuestions.length > 0) {
+                console.warn(`Only ${quizQuestions.length} unique questions available instead of ${questionCount} requested.`);
+            }
             
             document.getElementById('selectorScreen').style.display = 'none';
             document.getElementById('quizScreen').style.display = 'block';
