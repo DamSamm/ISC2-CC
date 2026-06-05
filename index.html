@@ -194,6 +194,31 @@
             border-left: 4px solid #f44336;
         }
 
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .quiz-header div {
+            text-align: center;
+        }
+
+        .quiz-header .timer {
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .quiz-header .score-display {
+            color: #764ba2;
+            font-size: 1.2em;
+        }
+
         .button-group {
             display: flex;
             gap: 15px;
@@ -382,6 +407,10 @@
 
         <!-- Quiz Screen -->
         <div id="quizScreen" class="quiz-screen">
+            <div class="quiz-header">
+                <div class="timer">⏱️ Time: <span id="timerDisplay">00:00</span></div>
+                <div class="score-display">✓ Correct: <span id="currentScore">0</span>/<span id="totalQuestionsDisplay">0</span></div>
+            </div>
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
             </div>
@@ -390,7 +419,7 @@
             <div class="options" id="optionsContainer"></div>
             <div class="feedback" id="feedback"></div>
             <div class="button-group">
-                <button class="btn-secondary" onclick="previousQuestion()">← Previous</button>
+                <button class="btn-secondary" id="prevBtn" onclick="previousQuestion()">← Previous</button>
                 <button class="btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
             </div>
         </div>
@@ -423,6 +452,9 @@
         let selectedAnswers = [];
         let answered = false;
         let questionCount = 50;
+        let quizStartTime = 0;
+        let timerInterval = null;
+        let isQuizActive = false;
 
         // Initialize quiz
         async function initQuiz() {
@@ -473,11 +505,12 @@
             const seenQuestions = new Set();
             
             for (let i = 0; i < shuffled.length && quizQuestions.length < questionCount; i++) {
-                const qText = shuffled[i].question.toLowerCase().trim();
+                const qObj = shuffled[i];
+                const qKey = JSON.stringify({q: qObj.question, o: qObj.options});
                 
-                if (!seenQuestions.has(qText)) {
-                    seenQuestions.add(qText);
-                    quizQuestions.push(shuffled[i]);
+                if (!seenQuestions.has(qKey)) {
+                    seenQuestions.add(qKey);
+                    quizQuestions.push(qObj);
                 }
             }
             
@@ -490,8 +523,15 @@
             document.getElementById('quizScreen').style.display = 'block';
             
             currentQuestion = 0;
-            score = 0;
             selectedAnswers = new Array(quizQuestions.length).fill(null);
+            document.getElementById('totalQuestionsDisplay').textContent = quizQuestions.length;
+            document.getElementById('currentScore').textContent = '0';
+            
+            // Start timer
+            quizStartTime = Date.now();
+            isQuizActive = true;
+            startTimer();
+            
             displayQuestion();
         }
 
@@ -521,15 +561,41 @@
             const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
             document.getElementById('progressFill').style.width = progress + '%';
 
-            // Show previously selected answer
+            // Show previously selected answer (locked, cannot change)
             if (selectedAnswers[currentQuestion] !== null) {
                 const buttons = optionsContainer.querySelectorAll('.option');
-                buttons[selectedAnswers[currentQuestion]].classList.add('selected');
+                const prevAnswer = selectedAnswers[currentQuestion];
+                const prevQuestion = quizQuestions[currentQuestion];
+                
+                buttons[prevAnswer].classList.add('selected');
+                buttons[prevAnswer].classList.add('disabled');
+                buttons.forEach(btn => btn.classList.add('disabled'));
+                
+                // Show feedback for previous answer
+                const isCorrect = prevAnswer === prevQuestion.correctAnswerIndex;
+                const feedback = document.getElementById('feedback');
+                
+                if (isCorrect) {
+                    buttons[prevAnswer].classList.add('correct');
+                    feedback.className = 'feedback show correct';
+                    feedback.textContent = '✓ Correct!';
+                } else {
+                    buttons[prevAnswer].classList.add('incorrect');
+                    buttons[prevQuestion.correctAnswerIndex].classList.add('correct');
+                    feedback.className = 'feedback show incorrect';
+                    feedback.textContent = '✗ Incorrect. The correct answer is: ' + 
+                        prevQuestion.options[prevQuestion.correctAnswerIndex];
+                }
+                
+                answered = true;
+            } else {
+                document.getElementById('feedback').classList.remove('show');
             }
 
-            document.getElementById('feedback').classList.remove('show');
             document.getElementById('nextBtn').textContent = 
                 currentQuestion === quizQuestions.length - 1 ? 'Finish' : 'Next →';
+            
+            updatePreviousButtonState();
         }
 
         function selectAnswer(index) {
@@ -551,7 +617,6 @@
             const feedback = document.getElementById('feedback');
             
             if (isCorrect) {
-                score++;
                 buttons[index].classList.add('correct');
                 feedback.className = 'feedback show correct';
                 feedback.textContent = '✓ Correct!';
@@ -565,6 +630,9 @@
 
             // Disable all options
             buttons.forEach(btn => btn.classList.add('disabled'));
+            
+            // Update score display
+            updateScoreDisplay();
         }
 
         function nextQuestion() {
@@ -580,16 +648,61 @@
             if (currentQuestion > 0) {
                 currentQuestion--;
                 displayQuestion();
+                updatePreviousButtonState();
             }
+        }
+        
+        function updatePreviousButtonState() {
+            const prevBtn = document.getElementById('prevBtn');
+            if (currentQuestion === 0) {
+                prevBtn.disabled = true;
+            } else {
+                prevBtn.disabled = false;
+            }
+        }
+        
+        function updateScoreDisplay() {
+            let correctCount = 0;
+            for (let i = 0; i < selectedAnswers.length; i++) {
+                if (selectedAnswers[i] !== null && selectedAnswers[i] === quizQuestions[i].correctAnswerIndex) {
+                    correctCount++;
+                }
+            }
+            document.getElementById('currentScore').textContent = correctCount;
+        }
+        
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                if (!isQuizActive) return;
+                const elapsed = Math.floor((Date.now() - quizStartTime) / 1000);
+                const minutes = Math.floor(elapsed / 60);
+                const seconds = elapsed % 60;
+                document.getElementById('timerDisplay').textContent = 
+                    String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+        
+        function stopTimer() {
+            isQuizActive = false;
+            if (timerInterval) clearInterval(timerInterval);
         }
 
         function showResults() {
+            stopTimer();
             document.getElementById('quizScreen').style.display = 'none';
             document.getElementById('resultsScreen').style.display = 'block';
 
-            const percentage = Math.round((score / quizQuestions.length) * 100);
+            // Calculate final score from selectedAnswers
+            let finalScore = 0;
+            for (let i = 0; i < selectedAnswers.length; i++) {
+                if (selectedAnswers[i] !== null && selectedAnswers[i] === quizQuestions[i].correctAnswerIndex) {
+                    finalScore++;
+                }
+            }
+            
+            const percentage = Math.round((finalScore / quizQuestions.length) * 100);
             document.getElementById('finalScore').textContent = percentage + '%';
-            document.getElementById('correctCount').textContent = score;
+            document.getElementById('correctCount').textContent = finalScore;
             document.getElementById('totalCount').textContent = quizQuestions.length;
             document.getElementById('percentScore').textContent = percentage;
 
@@ -616,6 +729,7 @@
         }
 
         function restartQuiz() {
+            stopTimer();
             currentQuestion = 0;
             score = 0;
             answered = false;
